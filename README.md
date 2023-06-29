@@ -28,9 +28,9 @@ elif model_name == 'some_other_model':
     ...
 elif model_name == 'mymodel':
     from mymodel_methods import ConfigGeneratorMyModel
-	ConfigGenerator_class = ConfigGeneratorMyModel
-	from mymodel_methods import train_myModel
-	train_model_method = train_myModel
+    ConfigGenerator_class = ConfigGeneratorMyModel
+    from mymodel_methods import train_myModel
+    train_model_method = train_myModel
 else:
     ...
 ```
