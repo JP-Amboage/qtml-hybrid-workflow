@@ -1,0 +1,12 @@
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
+__pycache__/
+*.joblib
+delete*
+ignore/
+*out.csv
+*.out
+*.err
+*.log
