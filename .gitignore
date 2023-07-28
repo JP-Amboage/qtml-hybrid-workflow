@@ -10,3 +10,4 @@ ignore/
 *.out
 *.err
 *.log
+*.png
