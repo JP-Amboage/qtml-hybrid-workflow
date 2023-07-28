@@ -1,6 +1,6 @@
 # HYBRID WORKFLOW REPO for QTML
 - [File structure](#file-structure)
-- [How to add a new target model](#how-to-add-a-new-target-model:-MyModel)
+- [How to add a new target model](#how-to-add-a-new-target-model)
 - [Main files args](#main-files-args)
 - [Other relevant repositories](#other-relevant-repositories)
 ## File structure
