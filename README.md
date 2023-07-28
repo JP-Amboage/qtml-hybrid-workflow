@@ -1,5 +1,8 @@
 # HYBRID WORKFLOW REPO for QTML
-
+- [File structure](#file-structure)
+- [How to add a new target model](#how-to-add-a-new-target-model:-MyModel)
+- [Main files args](#main-files-args)
+- [Other relevant repositories](#other-relevant-repositories)
 ## File structure
 * `MPI_regular_hyperband.py`: main script for running regular hyperband. 
 * `MPI_swift_hyperband.py`: main script for running swift-hyperband. 
@@ -59,3 +62,7 @@ else:
     - `--k`: (default 0.5) proportion of models to train, taken from fast-hyperband.
     - `--known_curve`: (default 0.5) position of the performance prediction decision points inside each round.
     - `--pred_type`: (default quantum) quantum | classical.
+  
+## Other relevant repositories
+* [Sequential modular implementation of Swift-Hyperband that also allows for simulated runs](https://github.com/JP-Amboage/swift-hb).
+* [Distributed implementation of Swift-Hyperband for Rusty and Swift-ASHA draft](https://github.com/JP-Amboage/swift-distributed-rusty).
