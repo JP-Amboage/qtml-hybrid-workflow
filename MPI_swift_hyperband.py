@@ -300,7 +300,7 @@ def swift_hyperband(
 def main(dir_name, seed, model_name, pred_type, save_models, r, eta, d, k, known_curve):
     R = r
     global Predictor_class
-
+    
     """
 	CHANGE THIS TO ADD MORE MODELS
 	"""
@@ -315,7 +315,7 @@ def main(dir_name, seed, model_name, pred_type, save_models, r, eta, d, k, known
         from cifar10_torch_methods import ConfigGeneratorCifar10
 
         ConfigGenerator_class = ConfigGeneratorCifar10
-        from cifar10_tf_methods import train_cifar
+        from cifar10_torch_methods import train_cifar
 
         train_model_method = train_cifar
         
@@ -324,6 +324,11 @@ def main(dir_name, seed, model_name, pred_type, save_models, r, eta, d, k, known
         ConfigGenerator_class = ConfigGeneratorTinyImg
         from tiny_img_torch_methods import train_tinyimg
         train_model_method = train_tinyimg
+    elif model_name == 'openml_torch':
+        from openml_torch_methods import ConfigGeneratorOpenML
+        ConfigGenerator_class = ConfigGeneratorOpenML
+        from openml_torch_methods import train_openml
+        train_model_method = train_openml
         
     else:
         if model_name != "lstm":

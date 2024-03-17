@@ -161,6 +161,11 @@ def main(dir_name, seed, model_name, save_models, r, eta):
         ConfigGenerator_class = ConfigGeneratorTinyImg
         from tiny_img_torch_methods import train_tinyimg
         train_model_method = train_tinyimg
+    elif model_name == 'openml_torch':
+        from openml_torch_methods import ConfigGeneratorOpenML
+        ConfigGenerator_class = ConfigGeneratorOpenML
+        from openml_torch_methods import train_openml
+        train_model_method = train_openml
     else:
         if model_name != 'lstm':
             print(
