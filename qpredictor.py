@@ -8,7 +8,7 @@ import embedding as embedding
 
 class QPredictor():
 	def __init__(self, sampler = None):
-		os.environ["DWAVE_API_TOKEN"] = "xNrg-35bb63fd9ff4c1610c88dc5f30ac95d75320bdcb"
+		os.environ["DWAVE_API_TOKEN"] = "xNrg-2f975ece26fc5e95dc26d687de6668a96ea0d4c6"
 		self.trained = False
 		self.model = QSVR()
 		self.sampler = sampler 
@@ -42,13 +42,13 @@ class QPredictor():
 		if self.sampler == None:
 			if not os.path.isfile("./embeddings/" + str(problem_size) + "embedding.txt"):
 				print("=== Couldn't find a suitable embedding file: A new embedding file will be created: " + str(problem_size) + "embedding.txt")
-				emb = embedding.get_clique_emebedding(dim=problem_size,region="eu-central-1", solver="Advantage_system5.3")
+				emb = embedding.get_clique_emebedding(dim=problem_size,region="eu-central-1", solver="Advantage_system5.4")
 				if not os.path.exists("./embeddings"): os.makedirs("./embeddings")
 				embedding.save_embedding(emb, "./embeddings/" + str(problem_size))
 		
 			embedding_file_name = "./embeddings/" + str(problem_size) + "embedding.txt"
 			region='eu-central-1'
-			solver='Advantage_system5.3'
+			solver='Advantage_system5.4'
 			self.sampler = utility.define_sampler_from_embedding(embedding_file_name, region, solver)
 
 		self.model.fit(X, y.reshape(-1,1),
