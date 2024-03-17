@@ -3,8 +3,7 @@
 export TMPDIR="/p/project/deepext/$USER"
 
 ml --force purge
-##ml Stages/2022 GCC/11.2.0 OpenMPI/4.1.2 cuDNN/8.3.1.22-CUDA-11.5 NCCL/2.11.4-CUDA-11.5 Python/3.9.6 TensorFlow
-ml Stages/2023 GCC/11.3.0 OpenMPI/4.1.4 cuDNN/8.6.0.163-CUDA-11.7 Python/3.10.4 
+ml Stages/2024 GCC/12.3.0 ParaStationMPI/5.9.2-1 CUDA/12 Python/3.11.3 mpi4py/3.1.4
 
 python3 -m venv dwave_env
 
@@ -15,8 +14,9 @@ pip3 install numpy
 pip3 install pandas
 pip3 install dwave-ocean-sdk
 pip3 install tensorflow
-pip3 install mpi4py
+#pip3 install mpi4py
 pip3 install torch torchvision
+pip3 install openml
 
 yes | dwave setup
 
