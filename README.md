@@ -64,5 +64,5 @@ else:
     - `--pred_type`: (default quantum) quantum | classical.
   
 ## Other relevant repositories
-* [Sequential modular implementation of Swift-Hyperband that also allows for simulated runs](https://github.com/JP-Amboage/swift-hb).
-* [Distributed implementation of Swift-Hyperband for Rusty and Swift-ASHA draft](https://github.com/JP-Amboage/swift-distributed-rusty).
+* [Sequential modular implementation of Swift-Hyperband that also allows for simulated runs](https://github.com/JP-Amboage/swift-hb) (not public).
+* [Distributed implementation of Swift-Hyperband for Rusty and Swift-ASHA draft](https://github.com/JP-Amboage/swift-distributed-rusty) (not public).
