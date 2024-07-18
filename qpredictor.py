@@ -8,7 +8,7 @@ import embedding as embedding
 
 class QPredictor():
 	def __init__(self, sampler = None):
-		os.environ["DWAVE_API_TOKEN"] = "xNrg-2f975ece26fc5e95dc26d687de6668a96ea0d4c6"
+		os.environ["DWAVE_API_TOKEN"] = ""
 		self.trained = False
 		self.model = QSVR()
 		self.sampler = sampler 
